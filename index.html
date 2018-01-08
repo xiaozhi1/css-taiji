@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>css-taiji</title>
+</head>
+<style>
+#taiji {
+    top: 150px;
+    left: 150px;
+	width: 192px;
+	height: 96px;
+	background: #eee;
+	border-color: black;
+	border-style: solid;
+	border-width: 0px 0px 96px 0px;
+	border-radius: 100%;
+	position: relative;
+    box-shadow:0 0 1.5em black;
+    animation: roate 10s infinite linear;
+}
+#taiji:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	background: #eee;
+	border: 36px solid black;
+	border-radius: 100%;
+	width: 24px;
+	height: 24px;
+}
+#taiji:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: black;
+	border: 36px solid #eee;
+	border-radius:100%;
+	width: 24px;
+	height: 24px;
+}
+@keyframes roate {
+    0% {
+        transform: rotateZ(0)
+        }
+    100% {
+       transform: rotateZ(360deg)
+    }
+}
+</style>
+<body>
+  <div id="taiji"></div>
+</body>
+</html>
